@@ -1,0 +1,117 @@
+body{
+font-family:  Arial, sans-serif;
+background-color: #1a1a1a;
+color: White;
+margin: 0;
+padding: 0;
+}
+
+/* adding the gym image only to the client form page */ 
+body.newclient{
+position: relative;
+background: 
+url("https://t4.ftcdn.net/jpg/02/82/43/89/360_F_282438948_QzcfhIkkuQRhL8Fj4Am1P73PPICczNiF.jpg")
+no-repeat center center/cover;
+}
+
+header{
+background-color: #2E2E2E;
+color: silver;
+text-align: center;
+padding: 20px;
+font-size: 30px;
+font-weight: bold;
+border-radius: 30px; 
+}
+
+.box{
+max-width: 900px;
+background: #C0C0C0;
+margin: 50px auto;
+padding: 30px;
+border-radius: 10px;
+}
+
+form label {
+display: block;
+font-weight: bold;
+margin-top: 15px;
+color: #000;
+}
+
+input, select {
+width: 100%;
+color: #000;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #F3E8FF;
+border-radius: 10px;
+background-color: #E0E0E0;
+}
+
+button {
+width: 100%;
+background-color: #6B5B95;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+table{ /* table for the client list */
+width: 100%;
+margin-top: 20px;
+color: #000;
+}
+
+/* this is for ensuring that the spacing of the boxes are similar and don't overlap to cause readability issues */
+th, td {
+text-align: left;
+padding: 10px;
+}
+
+th{
+background-color:  #6B5B95;
+color: white;
+}
+
+
+
+.hidden{
+ display: none;
+}
+
+.pagebutton{
+display: inline-block;
+background-color: #B57EDC;
+color: white;
+padding: 10px 20px;
+border-radius: 6px;
+text-decoration: none;
+margin-top: 15px;
+}
+
+
+.search {
+ margin-bottom: 15px;
+}
+
+.search input {
+padding: 10px;
+border-radius: 5px;
+width: 300px;
+}
+
+.actions button{
+background-color: #B57EDC;
+ color: white;
+margin-right: 10px;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+}
+
+.actions button:last-child{ /* for the delete button*/
+background-color: #CBA0E6;
+}
