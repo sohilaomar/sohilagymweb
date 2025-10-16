@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>New Client Sheet</title>
+<link rel="stylesheet" href="style.css"> <!--linking CSS file for styling -->
+</head>
+
+<body class="newclient"> 
+<header>Client Form: Lean Gym</header> 
+
+<div class="box"  id="ClientPage">   <!--client form section -->
+<form>
+<label for="name">Client Name: </label>
+<input type="text" id="name" >
+
+<label for="age">Client Age: </label>
+<input type="number" id="age">
+
+<label for="gender">Client Gender:</label>
+<select id= "gender" required>
+<option value= " "></option>
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<label for= "email">Client Email: </label>
+ <input type="email" id="email" >
+
+<label for= "phone" >Client Phone:</label>
+<input type="tel" id="phone">
+
+<label for= "goal">Client Fitness Goal: </label>
+<select id = "goal">
+<option>Weight Loss</option>
+<option>Muscle Gain</option>
+<option>Build Endurance</option>
+<option>Enjoyment</option>
+<option>Personal</option>
+</select>
+
+<label for= "start">Gym Membership Start Date:</label>
+<input type ="date">
+
+<button type="submit">Add New Client</button>
+</form>
+
+ <!-- ability to switch from the adding form to the client list via a different button for the managers--> 
+<a href="#" class="pagebutton" onclick="ListPage()">View Client List</a> 
+  </div>
+
+ <!-- the box is initially hidden until clicked on to see the client list section -->
+<div class="box hidden" id="clientListPage">
+ <h2>Client List</h2>
+<div class="search">
+<input type="text" placeholder="Search for client">
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Fitness Goal</th>
+<th>Membership Start</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+ <tbody>
+ <tr>
+<td>Sohila Omar</td>
+<td>sohila23@gmail.com</td>
+<td>0102245670</td>
+<td>Weight Loss</td>
+<td>01/06/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Shahd Omar</td>
+<td>shahd@yahoo.com</td>
+<td>0102345698</td>
+<td>Muscle Gain</td>
+<td>01/06/2025</td>
+<td class="actions">
+<button>Edit</button>
+ <button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Maya Elmalah</td>
+ <td>mayaaa@gmail.com</td>
+ <td>0126729165</td>
+<td>Personal</td>
+<td>01/06/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+ </tr>
+
+<tr>
+<td>Jana Refai</td>
+<td>Janaa123@yahoo.com</td>
+<td>0111267920</td>
+<td>Muscle Gain</td>
+<td>02/01/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Mayar Motreb</td>
+<td>mayar@yahoo.com</td>
+<td>0108956213</td>
+ <td>Personal</td>
+<td>02/02/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+ </tr>
+
+<tr>
+<td>Leen Shadid</td>
+<td>nina123@yahoo.com</td>
+ <td>0103452198</td>
+<td>Muscle Gain</td>
+<td>03/02/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Haleema Abo</td>
+<td>abohal@yahoo.com</td>
+<td>0102347183</td>
+<td>Build Endurance</td>
+<td>10/03/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+ </td>
+</tr>
+
+<tr>
+<td>Moahmed Omar</td>
+<td>momar@gmail.com</td>
+<td>0111145698</td>
+<td>Muscle Gain</td>
+<td>10/04/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Mariam Amr</td>
+<td>Mairammm@yahoo.com</td>
+<td>0122345698</td>
+<td>Enjoyment</td>
+<td>12/04/2025</td>
+<td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+<tr>
+<td>Loujine amr</td>
+<td>amrlouji@gmail.com</td>
+<td>0102345321</td>
+<td>Enjoyment</td>
+<td>12/04/2025</td>
+ <td class="actions">
+<button>Edit</button>
+<button>Remove</button>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<!-- another button to return to form section -->
+<a href="#" class="pagebutton" onclick="FormPage()"> Back to Form</a>
+
+<script>
+
+<!-- using java-script ignorer to alternate between the first form page and the second page where espntially it is hiding the first box and then making the other box that you want to view appear depending on if you want to enter the new clients names or see the current clients and wait them-->
+function ListPage(){
+document.getElementById('ClientPage').classList.add('hidden');
+document.getElementById('clientListPage').classList.remove('hidden');
+}
+
+function FormPage() {
+document.getElementById('clientListPage').classList.add('hidden');
+document.getElementById('ClientPage').classList.remove('hidden');
+}
+  </script>
+
+
+</body>
+</html>
